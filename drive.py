@@ -53,4 +53,4 @@ def send_control(steering_angle, throttle):
 if __name__ == '__main__':
     model = load_model('model.h5')
     app = socketio.Middleware(sio, app)
-    wsgi.server(eventlet.listen(('127.0.0.1', 4567)), app)
+    wsgi.server(eventlet.listen(('', 4567)), app)
